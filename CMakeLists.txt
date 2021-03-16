@@ -9,15 +9,15 @@ find_package(geometry_msgs REQUIRED)
 
 ament_python_install_package(${PROJECT_NAME})
 
-if(BUILD_TESTING)
-  find_package(rclpy REQUIRED)
-  find_package(ament_cmake_nose REQUIRED)
+# if(BUILD_TESTING)
+#   find_package(rclpy REQUIRED)
+#   find_package(ament_cmake_nose REQUIRED)
 
-  ament_add_nose_test(pointclouds test/test_pointclouds.py)
-  ament_add_nose_test(images test/test_images.py)
-  ament_add_nose_test(occupancygrids test/test_occupancygrids.py)
-  ament_add_nose_test(geometry test/test_geometry.py)
-endif()
+#   ament_add_nose_test(pointclouds test/test_pointclouds.py)
+#   ament_add_nose_test(images test/test_images.py)
+#   ament_add_nose_test(occupancygrids test/test_occupancygrids.py)
+#   ament_add_nose_test(geometry test/test_geometry.py)
+# endif()
 
 ##############
 ament_export_dependencies(ament_cmake)
